@@ -8,12 +8,13 @@ const gmail = google.gmail('v1');
 
 // Specify the access scopes required. If authorized, Google will grant your
 // registered OAuth client access to your profile, email address, and data in
-// your Gmail and Google Sheets.
+// your Gmail.
 const requiredScopes = [
   'profile',
   'email',
   'https://www.googleapis.com/auth/gmail.modify',
-  'https://www.googleapis.com/auth/spreadsheets'
+  'https://www.googleapis.com/auth/gmail.compose',
+  'https://www.googleapis.com/auth/gmail.readonly'
 ];
 
 const auth = Auth('datastore', requiredScopes, 'email', true);
